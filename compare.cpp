@@ -1,8 +1,11 @@
-/JASKIRAT KAUR
+//JASKIRAT KAUR
 //Homework  
 // 02.13.18
 //SAVED FILE
-// 
+// compare
+//two diff elevations
+//lab 3c
+
 #include <cmath>
 #include <iostream>
 #include <fstream>
@@ -26,9 +29,9 @@ int main() {
 
     //user input
     cout << "Enter starting date: ";
-    cin >> user_startdate;
+    cin >> user_startdate; //asks user for beginning date
     cout << "Enter ending date: ";
-    cin >> user_enddate;
+    cin >> user_enddate; //asks user for end date
 	
 
 	
@@ -37,7 +40,7 @@ int main() {
         fin.ignore(INT_MAX, '\n');
         //user check date and give the correct value for east storage
 	    
-	bool entered_range = 0;
+	bool entered_range = 0; 
 	if (date == user_startdate){
 		entered_range=1;
 		while(fin >> date >> eastSt >> eastEl >> westSt >> westEl)
