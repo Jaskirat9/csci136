@@ -24,7 +24,7 @@ int main() {
     getline(fin, junk);
 
     //read file
-    string user_startdate, user_enddate;
+    string date, user_startdate, user_enddate;
     double eastSt, eastEl, westSt, westEl;
 
     //user input
@@ -50,10 +50,10 @@ int main() {
             }
 			else if(westEl < eastEl)
             {
-		cout << "West" << endl
+		cout << "West" << endl;
             }
 			else if(westEl == eastEl){
-		cout << "Equal" << endl
+		cout << "Equal" << endl;
 	}
 	else if (date == user_enddate){
 		entered_range=0;
@@ -61,6 +61,7 @@ int main() {
        
      
 return 0;
-}
+	}
+    }
 
 	
