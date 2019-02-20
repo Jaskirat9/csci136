@@ -40,23 +40,22 @@ int main() {
         fin.ignore(INT_MAX, '\n');
         //user check date and give the correct value for east storage
 	    
-	bool entered_range = 0; 
+	bool entered_range = false; 
 	if (date == user_startdate){
-		entered_range=1;
-		while(fin >> date >> eastSt >> eastEl >> westSt >> westEl)
-			if(eastEl > westEl)
+		entered_range= true;
+		if(eastEl > westEl)
             {
 		cout << "East" << endl;
             }
-			else if(westEl < eastEl)
+		else if(westEl < eastEl)
             {
 		cout << "West" << endl;
             }
-			else if(westEl == eastEl){
+		else if(westEl == eastEl){
 		cout << "Equal" << endl;
 	}
 	else if (date == user_enddate){
-		entered_range=0;
+		entered_range= false;
 	}
        
      
