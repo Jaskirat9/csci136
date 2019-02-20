@@ -29,25 +29,34 @@ int main() {
     cin >> user_startdate;
     cout << "Enter ending date: ";
     cin >> user_enddate;
+	
 
+	
     while(fin >> date >> eastSt >> eastEl >> westSt >> westEl)
     {
         fin.ignore(INT_MAX, '\n');
         //user check date and give the correct value for east storage
-        if(eastEl > westEl)
+	    
+	bool entered_range = 0;
+	if (date == user_startdate){
+		entered_range=1;
+		while(fin >> date >> eastSt >> eastEl >> westSt >> westEl)
+			if(eastEl > westEl)
             {
-                min = eastEl; //store min value
+		cout << "East" << endl;
             }
-        else if(westEl < eastEl)
+			else if(westEl < eastEl)
             {
-                max = westEl; //stores max value
+		cout << "West" << endl
             }
-        {
-
-        }
-    }
-    cout << date << min << endl; //prints min
-    cout << date << max << endl; //prints max
+			else if(westEl == eastEl){
+		cout << "Equal" << endl
+	}
+	else if (date == user_enddate){
+		entered_range=0;
+	}
+       
+     
 return 0;
 }
 
