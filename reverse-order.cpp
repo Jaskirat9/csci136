@@ -35,19 +35,19 @@ int main(){
 	string myArray[400];
 	int center = 0;
 
-    while(fin >> date >> eastSt >> eastEl >> westSt >> westEl)
+    while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) //reads file in this order
     {
 		if(date >= earlier_date && date <= later_date)
 		{	
-			myArray[center] = date + " " + westEl;
+			myArray[center] = date + " " + westEl; 
 			center++;
 		}
 	}	
 
-	for(int i = center - 1; i >= 0; i--)
-		cout << myArray[i] <<endl;
+	for(int i = center - 1; i >= 0; i--) 
+		cout << myArray[i] <<endl; 
 
-	fin.close();
+	fin.close(); //closes file
 
 return 0;
-}
+} //i think that's enough
